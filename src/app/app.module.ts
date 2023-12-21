@@ -10,6 +10,7 @@ import { AddTodoFormComponent } from './components/shared/add-todo-form/add-todo
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { reducer_todo } from './state/todo/todo.reducer';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { EffectsModule } from '@ngrx/effects';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ todos: reducer_todo }),
     EffectsModule.forRoot([])
   ],
   providers: [],
