@@ -8,6 +8,13 @@ export const action_addTodo = createAction(
     }>()
 )
 
+export const action_deleteTodo = createAction(
+    '[ToDo] deleteTodo',
+    props<{ 
+        todoTitle: string; 
+    }>()
+)
+
 export const action_fetchTodo = createAction(
     '[ToDo] fetchTodo'
 )
