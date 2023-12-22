@@ -5,10 +5,10 @@ import { InitialTodoState } from './todo.state';
 
 export const reducer_todo = createReducer(
     InitialTodoState,
-    on(action_addTodo, (state, { newTodo }) => {console.log({state}); return ({
+    on(action_addTodo, (state, { newTodo }) => ({
         ...state,
-        todos: state.TodoList.concat([newTodo])
-    })}
+        TodoList: state.TodoList.concat([newTodo])
+    })
     ),
     on(action_fetchTodo, (state) => ({
         ...state

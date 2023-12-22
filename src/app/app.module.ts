@@ -24,7 +24,8 @@ import { reducer_todo } from './state/todo/todo.reducer';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ todos: reducer_todo }),
+    StoreModule.forRoot({ todostate: reducer_todo }),
+    
     EffectsModule.forRoot([])
   ],
   providers: [],
